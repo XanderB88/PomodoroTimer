@@ -1,14 +1,13 @@
 //
-//  ContentView.swift
-//  Shared
+//  ConfiguraionScreen.swift
+//  PomodoroTimer
 //
-//  Created by Alexander on 12.08.2021.
+//  Created by Alexander on 18.08.2021.
 //
 
 import SwiftUI
 
-struct HomeView: View {
-    
+struct ConfigurationScreen: View {
     @State var selectedPicker = timePickers()
     
     var body: some View {
@@ -27,9 +26,9 @@ struct HomeView: View {
                 PickerView(titleValue: selectedPicker.rest.title, timeValue: selectedPicker.rest.time, selectedTime: 4)
                 PickerView(titleValue: selectedPicker.longRest.title, timeValue: selectedPicker.longRest.time, selectedTime: 15)
                 PickerView(titleValue: selectedPicker.cicle.title, timeValue: selectedPicker.cicle.time, selectedTime: 3)
-               
+                
                 Spacer()
-              
+                
                 ButtonStart()
             }
         }
@@ -37,8 +36,9 @@ struct HomeView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+
+struct ConfiguraionScreen_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        ConfigurationScreen()
     }
 }
