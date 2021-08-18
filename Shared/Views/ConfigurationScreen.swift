@@ -19,17 +19,13 @@ struct ConfigurationScreen: View {
                 Text("Pomodoro")
                     .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
                     .font(.custom("Quicksand-Regular", size: 32))
-                
                 Spacer()
-                
                 PickerView(titleValue: selectedPicker.work.title, timeValue: selectedPicker.work.time, selectedTime: 15)
                 PickerView(titleValue: selectedPicker.rest.title, timeValue: selectedPicker.rest.time, selectedTime: 4)
                 PickerView(titleValue: selectedPicker.longRest.title, timeValue: selectedPicker.longRest.time, selectedTime: 15)
                 PickerView(titleValue: selectedPicker.cicle.title, timeValue: selectedPicker.cicle.time, selectedTime: 3)
-                
                 Spacer()
-                
-                ButtonStart()
+                ButtonAction(buttonSymbol: "tray.and.arrow.down")
             }
         }
         

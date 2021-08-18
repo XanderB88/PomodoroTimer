@@ -12,9 +12,6 @@ struct CountDownTimer: View {
     
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.2470588235, green: 0.2705882353, blue: 0.3960784314, alpha: 1)), Color(#colorLiteral(red: 0.168627451, green: 0.1882352941, blue: 0.2941176471, alpha: 1))]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                .edgesIgnoringSafeArea(.all)
-            
             ZStack {
                 Circle()
                     .fill(Color(#colorLiteral(red: 0.2274509804, green: 0.2431372549, blue: 0.3529411765, alpha: 1)))

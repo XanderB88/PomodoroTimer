@@ -11,8 +11,10 @@
 		1169137526CC7B70009CA6C6 /* ConfigurationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1169137326CC7B70009CA6C6 /* ConfigurationScreen.swift */; };
 		1169137726CC7DA6009CA6C6 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1169137626CC7DA6009CA6C6 /* MainScreenView.swift */; };
 		1169137826CC7DA6009CA6C6 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1169137626CC7DA6009CA6C6 /* MainScreenView.swift */; };
-		117AEA3326CB3833001CBD5E /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117AEA3226CB3833001CBD5E /* ActionButton.swift */; };
-		117AEA3426CB3833001CBD5E /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117AEA3226CB3833001CBD5E /* ActionButton.swift */; };
+		1169137A26CC8BE1009CA6C6 /* ButtonConfiguraton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1169137926CC8BE1009CA6C6 /* ButtonConfiguraton.swift */; };
+		1169137B26CC8BE1009CA6C6 /* ButtonConfiguraton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1169137926CC8BE1009CA6C6 /* ButtonConfiguraton.swift */; };
+		117AEA3326CB3833001CBD5E /* ButtonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117AEA3226CB3833001CBD5E /* ButtonAction.swift */; };
+		117AEA3426CB3833001CBD5E /* ButtonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117AEA3226CB3833001CBD5E /* ButtonAction.swift */; };
 		117AEA3626CB40C7001CBD5E /* CountDownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117AEA3526CB40C7001CBD5E /* CountDownTimer.swift */; };
 		117AEA3726CB40C7001CBD5E /* CountDownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117AEA3526CB40C7001CBD5E /* CountDownTimer.swift */; };
 		1181E09A26C4926700D275A8 /* PomodoroTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1181E08726C4926500D275A8 /* PomodoroTimerApp.swift */; };
@@ -25,8 +27,6 @@
 		1181E0AA26C49F8E00D275A8 /* PickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1181E0A826C49F8E00D275A8 /* PickerModel.swift */; };
 		1181E0AC26C4B08200D275A8 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1181E0AB26C4B08200D275A8 /* PickerView.swift */; };
 		1181E0AD26C4B08200D275A8 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1181E0AB26C4B08200D275A8 /* PickerView.swift */; };
-		1182043C26C9DA8E00CDD199 /* ButtonStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1182043B26C9DA8E00CDD199 /* ButtonStart.swift */; };
-		1182043D26C9DA8E00CDD199 /* ButtonStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1182043B26C9DA8E00CDD199 /* ButtonStart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,8 @@
 		1109C6B026C5FFBC0074023B /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
 		1169137326CC7B70009CA6C6 /* ConfigurationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationScreen.swift; sourceTree = "<group>"; };
 		1169137626CC7DA6009CA6C6 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
-		117AEA3226CB3833001CBD5E /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		1169137926CC8BE1009CA6C6 /* ButtonConfiguraton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonConfiguraton.swift; sourceTree = "<group>"; };
+		117AEA3226CB3833001CBD5E /* ButtonAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAction.swift; sourceTree = "<group>"; };
 		117AEA3526CB40C7001CBD5E /* CountDownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimer.swift; sourceTree = "<group>"; };
 		1181E08726C4926500D275A8 /* PomodoroTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroTimerApp.swift; sourceTree = "<group>"; };
 		1181E08826C4926500D275A8 /* ApplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationView.swift; sourceTree = "<group>"; };
@@ -49,7 +50,6 @@
 		1181E09926C4926700D275A8 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		1181E0A826C49F8E00D275A8 /* PickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerModel.swift; sourceTree = "<group>"; };
 		1181E0AB26C4B08200D275A8 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
-		1182043B26C9DA8E00CDD199 /* ButtonStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,9 +159,9 @@
 			isa = PBXGroup;
 			children = (
 				1181E0AB26C4B08200D275A8 /* PickerView.swift */,
-				1182043B26C9DA8E00CDD199 /* ButtonStart.swift */,
-				117AEA3226CB3833001CBD5E /* ActionButton.swift */,
+				117AEA3226CB3833001CBD5E /* ButtonAction.swift */,
 				117AEA3526CB40C7001CBD5E /* CountDownTimer.swift */,
+				1169137926CC8BE1009CA6C6 /* ButtonConfiguraton.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -276,11 +276,11 @@
 				1181E0AC26C4B08200D275A8 /* PickerView.swift in Sources */,
 				117AEA3626CB40C7001CBD5E /* CountDownTimer.swift in Sources */,
 				1181E0A926C49F8E00D275A8 /* PickerModel.swift in Sources */,
-				1182043C26C9DA8E00CDD199 /* ButtonStart.swift in Sources */,
 				1169137726CC7DA6009CA6C6 /* MainScreenView.swift in Sources */,
 				1181E09C26C4926700D275A8 /* ApplicationView.swift in Sources */,
+				1169137A26CC8BE1009CA6C6 /* ButtonConfiguraton.swift in Sources */,
 				1181E09A26C4926700D275A8 /* PomodoroTimerApp.swift in Sources */,
-				117AEA3326CB3833001CBD5E /* ActionButton.swift in Sources */,
+				117AEA3326CB3833001CBD5E /* ButtonAction.swift in Sources */,
 				1169137426CC7B70009CA6C6 /* ConfigurationScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,11 +292,11 @@
 				1181E0AD26C4B08200D275A8 /* PickerView.swift in Sources */,
 				117AEA3726CB40C7001CBD5E /* CountDownTimer.swift in Sources */,
 				1181E0AA26C49F8E00D275A8 /* PickerModel.swift in Sources */,
-				1182043D26C9DA8E00CDD199 /* ButtonStart.swift in Sources */,
 				1169137826CC7DA6009CA6C6 /* MainScreenView.swift in Sources */,
 				1181E09D26C4926700D275A8 /* ApplicationView.swift in Sources */,
+				1169137B26CC8BE1009CA6C6 /* ButtonConfiguraton.swift in Sources */,
 				1181E09B26C4926700D275A8 /* PomodoroTimerApp.swift in Sources */,
-				117AEA3426CB3833001CBD5E /* ActionButton.swift in Sources */,
+				117AEA3426CB3833001CBD5E /* ButtonAction.swift in Sources */,
 				1169137526CC7B70009CA6C6 /* ConfigurationScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
