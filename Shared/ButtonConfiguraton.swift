@@ -9,11 +9,12 @@ import SwiftUI
 
 struct ButtonConfiguraton: View {
     var buttonSymbol: String = "gear"
+    var function: () -> Void
     
     var body: some View {
         ZStack {
             Button(action: {
-                
+                self.function()
             }, label: {
                 Image(systemName: buttonSymbol)
                     .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
@@ -62,8 +63,12 @@ struct ButtonCofigurationStyle: ButtonStyle {
     }
 }
 
+func previewConfigurationButton() {
+    //Func do nothing, need for preview argument
+}
+
 struct ButtonConfiguraton_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonConfiguraton()
+        ButtonConfiguraton(function: previewConfigurationButton)
     }
 }

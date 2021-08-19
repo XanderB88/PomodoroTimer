@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ConfigurationScreen: View {
     @State var selectedPicker = timePickers()
+    @ObservedObject var viewModel: ConfigurationViewModel
     
     var body: some View {
         ZStack {
@@ -25,7 +26,7 @@ struct ConfigurationScreen: View {
                 PickerView(titleValue: selectedPicker.longRest.title, timeValue: selectedPicker.longRest.time, selectedTime: 15)
                 PickerView(titleValue: selectedPicker.cicle.title, timeValue: selectedPicker.cicle.time, selectedTime: 3)
                 Spacer()
-                ButtonAction(buttonSymbol: "tray.and.arrow.down")
+                ButtonAction(buttonSymbol: "tray.and.arrow.down", function: viewModel.save)
             }
         }
         
@@ -35,6 +36,6 @@ struct ConfigurationScreen: View {
 
 struct ConfiguraionScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ConfigurationScreen()
+        ConfigurationScreen(viewModel: ConfigurationViewModel())
     }
 }

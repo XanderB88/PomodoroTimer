@@ -12,12 +12,13 @@ import SwiftUI
 
 struct ButtonAction: View {
     var buttonSymbol: String = "play"
+    var function: () -> Void
+   
     
     var body: some View {
         ZStack {
-            
             Button(action: {
-                
+                self.function()
             }, label: {
               Image(systemName: buttonSymbol)
                 .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
@@ -31,7 +32,7 @@ struct ButtonAction: View {
 struct ButtonActionStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
-            .frame(width: 50, height: 50)
+            .frame(width: 40, height: 40)
             .padding()
             .background(
                 Group {
@@ -73,9 +74,12 @@ extension LinearGradient {
     }
 }
 
+func previewActionButton() {
+    //Func do nothing, need for preview argument
+}
 
 struct ActionButton_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonAction()
+        ButtonAction(function: previewActionButton)
     }
 }

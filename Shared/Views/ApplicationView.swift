@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ApplicationView: View {
     var body: some View {
-     MainScreenView()
+        MainScreenView(viewModel: MainViewModel())
     }
 }
 

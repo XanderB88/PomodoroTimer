@@ -27,6 +27,8 @@
 		1181E0AA26C49F8E00D275A8 /* PickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1181E0A826C49F8E00D275A8 /* PickerModel.swift */; };
 		1181E0AC26C4B08200D275A8 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1181E0AB26C4B08200D275A8 /* PickerView.swift */; };
 		1181E0AD26C4B08200D275A8 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1181E0AB26C4B08200D275A8 /* PickerView.swift */; };
+		11A86D9F26CDD36600B071EF /* ConfigurationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A86D9E26CDD36600B071EF /* ConfigurationViewModel.swift */; };
+		11A86DA126CDD38000B071EF /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A86DA026CDD38000B071EF /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		1181E09926C4926700D275A8 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		1181E0A826C49F8E00D275A8 /* PickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerModel.swift; sourceTree = "<group>"; };
 		1181E0AB26C4B08200D275A8 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		11A86D9E26CDD36600B071EF /* ConfigurationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewModel.swift; sourceTree = "<group>"; };
+		11A86DA026CDD38000B071EF /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 				115E626826C5EB30003B0B41 /* App */,
 				115E626926C5EB4F003B0B41 /* Model */,
 				1182043A26C9DA1100CDD199 /* Views */,
+				11A86D9D26CDD2F500B071EF /* ViewModel */,
 				1182043926C9D9E900CDD199 /* Components */,
 				115E626726C5EB15003B0B41 /* Supporting files */,
 			);
@@ -174,6 +179,15 @@
 				1169137626CC7DA6009CA6C6 /* MainScreenView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		11A86D9D26CDD2F500B071EF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				11A86D9E26CDD36600B071EF /* ConfigurationViewModel.swift */,
+				11A86DA026CDD38000B071EF /* MainViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,12 +290,14 @@
 				1181E0AC26C4B08200D275A8 /* PickerView.swift in Sources */,
 				117AEA3626CB40C7001CBD5E /* CountDownTimer.swift in Sources */,
 				1181E0A926C49F8E00D275A8 /* PickerModel.swift in Sources */,
+				11A86D9F26CDD36600B071EF /* ConfigurationViewModel.swift in Sources */,
 				1169137726CC7DA6009CA6C6 /* MainScreenView.swift in Sources */,
 				1181E09C26C4926700D275A8 /* ApplicationView.swift in Sources */,
 				1169137A26CC8BE1009CA6C6 /* ButtonConfiguraton.swift in Sources */,
 				1181E09A26C4926700D275A8 /* PomodoroTimerApp.swift in Sources */,
 				117AEA3326CB3833001CBD5E /* ButtonAction.swift in Sources */,
 				1169137426CC7B70009CA6C6 /* ConfigurationScreen.swift in Sources */,
+				11A86DA126CDD38000B071EF /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
