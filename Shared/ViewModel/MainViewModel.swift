@@ -11,23 +11,29 @@ import Foundation
 
 class MainViewModel: ObservableObject {
     
-    var buttonBellState: Bool = false
-    var buttonBellImage: String
-    var buttonConfigState: Bool = false
-    
-    init(buttonBellImage: String) {
-        self.buttonBellImage = buttonBellImage
-    }
-    
+    @Published var buttonBellState: Bool = false
+    @Published var buttonConfigState: Bool = false
+    @Published var buttonPlayState: Bool = false
+    @Published var buttonStopState: Bool = false
+   
     func buttonBellStateChanged() {
         buttonBellState.toggle()
-        buttonBellImage = buttonBellState ? "bell" : "bell.slash"
         print(buttonBellState)
-        print(buttonBellImage)
+
     }
     
     func buttonConfigStateChanged() {
         buttonConfigState.toggle()
+        print(buttonConfigState)
+    }
+    
+    func buttonPlayStateChanged() {
+        buttonPlayState.toggle()
+        print(buttonConfigState)
+    }
+    
+    func buttonStopStateChanged() {
+        buttonStopState.toggle()
         print(buttonConfigState)
     }
     

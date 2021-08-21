@@ -17,7 +17,7 @@ struct MainScreenView: View {
             
             VStack(alignment: .center, spacing: 30) {
                 HStack {
-                    ButtonConfiguraton(buttonSymbol: viewModel.buttonBellImage, function: viewModel.muteTimer, changes: viewModel.buttonBellStateChanged)
+                    ButtonConfiguraton(buttonSymbol: viewModel.buttonBellState ? "bell.slash" : "bell", function: viewModel.muteTimer, changes: viewModel.buttonBellStateChanged)
                     Spacer()
                     Text("Pomodoro")
                         .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
@@ -35,9 +35,9 @@ struct MainScreenView: View {
                 Spacer()
                 HStack {
                     Spacer()
-                    ButtonAction(buttonSymbol: "play", function: viewModel.startTimer)
+                    ButtonAction(buttonSymbol: viewModel.buttonPlayState ? "pause" : "play", function: viewModel.startTimer, changes: viewModel.buttonPlayStateChanged)
                     Spacer()
-                    ButtonAction(buttonSymbol: "stop", function: viewModel.stopTimer)
+                    ButtonAction(buttonSymbol: "stop", function: viewModel.stopTimer, changes: viewModel.buttonStopStateChanged)
                     Spacer()
                 }
                 Spacer()
@@ -49,6 +49,6 @@ struct MainScreenView: View {
 
 struct MainScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        MainScreenView(viewModel: MainViewModel(buttonBellImage: "bell"))
+        MainScreenView(viewModel: MainViewModel())
     }
 }

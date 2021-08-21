@@ -175,8 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				1181E08826C4926500D275A8 /* ApplicationView.swift */,
-				1169137326CC7B70009CA6C6 /* ConfigurationScreen.swift */,
 				1169137626CC7DA6009CA6C6 /* MainScreenView.swift */,
+				1169137326CC7B70009CA6C6 /* ConfigurationScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,8 +184,8 @@
 		11A86D9D26CDD2F500B071EF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				11A86D9E26CDD36600B071EF /* ConfigurationViewModel.swift */,
 				11A86DA026CDD38000B071EF /* MainViewModel.swift */,
+				11A86D9E26CDD36600B071EF /* ConfigurationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
