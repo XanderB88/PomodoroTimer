@@ -10,10 +10,12 @@ import SwiftUI
 struct ButtonConfiguraton: View {
     var buttonSymbol: String = "gear"
     var function: () -> Void
+    var changes: () -> Void
     
     var body: some View {
         ZStack {
             Button(action: {
+                self.changes()
                 self.function()
             }, label: {
                 Image(systemName: buttonSymbol)
@@ -64,11 +66,15 @@ struct ButtonCofigurationStyle: ButtonStyle {
 }
 
 func previewConfigurationButton() {
-    //Func do nothing, need for preview argument
+   print("Success")
+}
+
+func previewStatusOfButton() {
+   print("Button state changed")
 }
 
 struct ButtonConfiguraton_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonConfiguraton(function: previewConfigurationButton)
+        ButtonConfiguraton(function: previewConfigurationButton, changes: previewStatusOfButton)
     }
 }

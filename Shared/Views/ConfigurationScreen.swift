@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ConfigurationScreen: View {
-    @State var selectedPicker = timePickers()
     @ObservedObject var viewModel: ConfigurationViewModel
+    @State var selectedPicker = timePickers()
     
     var body: some View {
         ZStack {

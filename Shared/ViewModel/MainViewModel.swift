@@ -7,7 +7,30 @@
 
 import Foundation
 
+
+
 class MainViewModel: ObservableObject {
+    
+    var buttonBellState: Bool = false
+    var buttonBellImage: String
+    var buttonConfigState: Bool = false
+    
+    init(buttonBellImage: String) {
+        self.buttonBellImage = buttonBellImage
+    }
+    
+    func buttonBellStateChanged() {
+        buttonBellState.toggle()
+        buttonBellImage = buttonBellState ? "bell" : "bell.slash"
+        print(buttonBellState)
+        print(buttonBellImage)
+    }
+    
+    func buttonConfigStateChanged() {
+        buttonConfigState.toggle()
+        print(buttonConfigState)
+    }
+    
     
     // MARK: - Action methods
     func startTimer() {

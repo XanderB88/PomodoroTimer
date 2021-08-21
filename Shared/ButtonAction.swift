@@ -75,7 +75,7 @@ extension LinearGradient {
 }
 
 func previewActionButton() {
-    //Func do nothing, need for preview argument
+    print("Success")
 }
 
 struct ActionButton_Previews: PreviewProvider {
