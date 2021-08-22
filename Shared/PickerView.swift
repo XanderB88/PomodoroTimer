@@ -37,15 +37,6 @@ struct PickerView: View {
     }
 }
 
-extension View {
-    public func gradientForeground(colors: [Color]) -> some View {
-        self.overlay(LinearGradient(gradient: .init(colors: colors),
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing))
-            .mask(self)
-    }
-}
-
 struct PickerView_Previews: PreviewProvider {
     static var previews: some View {
         PickerView(titleValue: "Title", timeValue: ["1", "2"], selectedTime: 15)

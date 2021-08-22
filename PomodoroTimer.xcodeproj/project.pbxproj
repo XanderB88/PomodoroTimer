@@ -29,6 +29,7 @@
 		1181E0AD26C4B08200D275A8 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1181E0AB26C4B08200D275A8 /* PickerView.swift */; };
 		11A86D9F26CDD36600B071EF /* ConfigurationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A86D9E26CDD36600B071EF /* ConfigurationViewModel.swift */; };
 		11A86DA126CDD38000B071EF /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A86DA026CDD38000B071EF /* MainViewModel.swift */; };
+		11AC483426D315920042D28B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AC483326D315920042D28B /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		1181E0AB26C4B08200D275A8 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		11A86D9E26CDD36600B071EF /* ConfigurationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewModel.swift; sourceTree = "<group>"; };
 		11A86DA026CDD38000B071EF /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		11AC483326D315920042D28B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				1181E08626C4926500D275A8 /* Shared */,
+				11AC483226D3155C0042D28B /* Extensions */,
 				1181E09026C4926700D275A8 /* iOS */,
 				1181E09726C4926700D275A8 /* macOS */,
 				1181E08F26C4926700D275A8 /* Products */,
@@ -188,6 +191,14 @@
 				11A86D9E26CDD36600B071EF /* ConfigurationViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		11AC483226D3155C0042D28B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				11AC483326D315920042D28B /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +305,7 @@
 				1169137726CC7DA6009CA6C6 /* MainScreenView.swift in Sources */,
 				1181E09C26C4926700D275A8 /* ApplicationView.swift in Sources */,
 				1169137A26CC8BE1009CA6C6 /* ButtonConfiguraton.swift in Sources */,
+				11AC483426D315920042D28B /* Extensions.swift in Sources */,
 				1181E09A26C4926700D275A8 /* PomodoroTimerApp.swift in Sources */,
 				117AEA3326CB3833001CBD5E /* ButtonAction.swift in Sources */,
 				1169137426CC7B70009CA6C6 /* ConfigurationScreen.swift in Sources */,
