@@ -16,10 +16,10 @@ class MainViewModel: ObservableObject {
     @Published var buttonPlayState: Bool = false
     @Published var buttonStopState: Bool = false
    
+//    Change stata parameter when button pushed
     func buttonBellStateChanged() {
         buttonBellState.toggle()
         print(buttonBellState)
-
     }
     
     func buttonConfigStateChanged() {
@@ -34,7 +34,7 @@ class MainViewModel: ObservableObject {
     
     func buttonStopStateChanged() {
         buttonStopState.toggle()
-        print(buttonConfigState)
+        print(buttonStopState)
     }
     
     

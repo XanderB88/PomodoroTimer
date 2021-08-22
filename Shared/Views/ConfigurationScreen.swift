@@ -26,7 +26,7 @@ struct ConfigurationScreen: View {
                 PickerView(titleValue: selectedPicker.longRest.title, timeValue: selectedPicker.longRest.time, selectedTime: 15)
                 PickerView(titleValue: selectedPicker.cicle.title, timeValue: selectedPicker.cicle.time, selectedTime: 3)
                 Spacer()
-                ButtonAction(buttonSymbol: "tray.and.arrow.down", function: viewModel.save)
+                ButtonAction(buttonSymbol: "tray.and.arrow.down", function: viewModel.save, changes: viewModel.buttonSaveStateChanged)
             }
         }
         

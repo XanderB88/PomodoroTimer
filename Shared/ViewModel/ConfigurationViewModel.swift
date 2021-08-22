@@ -8,8 +8,13 @@
 import Foundation
 
 class ConfigurationViewModel: ObservableObject {
-    
-// MARK: - Methods
+    @Published var buttonSaveState = false
+
+    // MARK: - Methods
+    func buttonSaveStateChanged() {
+        buttonSaveState.toggle()
+        print(buttonSaveState)
+    }
     
     func save() {
         print("something")

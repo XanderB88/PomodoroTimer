@@ -35,21 +35,21 @@ struct ButtonCofigurationStyle: ButtonStyle {
             .background(
                 Group {
                     if configuration.isPressed {
-                            Circle()
-                                .fill(LinearGradient(Color(#colorLiteral(red: 0.2588235294, green: 0.2823529412, blue: 0.4117647059, alpha: 1)), Color(#colorLiteral(red: 0.3725490196, green: 0.4039215686, blue: 0.568627451, alpha: 1))))
-                                .overlay(
-                                    Circle()
-                                        .stroke(Color(#colorLiteral(red: 0.1490196078, green: 0.1705401411, blue: 0.283983558, alpha: 1)), lineWidth: 4.0)
-                                        .blur(radius: 4.0)
-                                        .offset(x: 3.0, y: 3.0)
-                                        .mask(RoundedRectangle(cornerRadius: 20.0).fill(LinearGradient(Color.black, Color.clear)))
-                                )
-                                .overlay(
-                                    Circle()
-                                        .stroke(Color(#colorLiteral(red: 0.3333333333, green: 0.3647058824, blue: 0.5137254902, alpha: 1)), lineWidth: 10.0)
-                                        .blur(radius: 4.0)
-                                        .offset(x: -3.0, y: -3.0)
-                                        .mask(RoundedRectangle(cornerRadius: 20.0).fill(LinearGradient(Color.black, Color.clear)))
+                        Circle()
+                            .fill(LinearGradient(Color(#colorLiteral(red: 0.2588235294, green: 0.2823529412, blue: 0.4117647059, alpha: 1)), Color(#colorLiteral(red: 0.3725490196, green: 0.4039215686, blue: 0.568627451, alpha: 1))))
+                            .overlay(
+                                Circle()
+                                    .stroke(Color(#colorLiteral(red: 0.1490196078, green: 0.1705401411, blue: 0.283983558, alpha: 1)), lineWidth: 4.0)
+                                    .blur(radius: 4.0)
+                                    .offset(x: 3.0, y: 3.0)
+                                    .mask(RoundedRectangle(cornerRadius: 20.0).fill(LinearGradient(Color.black, Color.clear)))
+                            )
+                            .overlay(
+                                Circle()
+                                    .stroke(Color(#colorLiteral(red: 0.3333333333, green: 0.3647058824, blue: 0.5137254902, alpha: 1)), lineWidth: 10.0)
+                                    .blur(radius: 4.0)
+                                    .offset(x: -3.0, y: -3.0)
+                                    .mask(RoundedRectangle(cornerRadius: 20.0).fill(LinearGradient(Color.black, Color.clear)))
                             )
                     } else {
                         ZStack {
@@ -65,15 +65,14 @@ struct ButtonCofigurationStyle: ButtonStyle {
     }
 }
 
-func previewConfigurationButton() {
-   print("Success")
-}
-
-func previewStatusOfButton() {
-   print("Button state changed")
-}
 
 struct ButtonConfiguraton_Previews: PreviewProvider {
+    static func previewConfigurationButton() {
+    }
+    
+    static func previewStatusOfButton() {
+    }
+    
     static var previews: some View {
         ButtonConfiguraton(function: previewConfigurationButton, changes: previewStatusOfButton)
     }
