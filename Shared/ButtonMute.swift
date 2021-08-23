@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ButtonConfiguraton: View {
+struct ButtonMute: View {
     var buttonSymbol: String = "gear"
     var function: () -> Void
     var changes: () -> Void
@@ -35,6 +35,6 @@ struct ButtonConfiguraton_Previews: PreviewProvider {
     }
     
     static var previews: some View {
-        ButtonConfiguraton(function: previewConfigurationButton, changes: previewStatusOfButton)
+        ButtonMute(function: previewConfigurationButton, changes: previewStatusOfButton)
     }
 }

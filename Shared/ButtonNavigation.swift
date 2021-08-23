@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-struct NavigationButton: View {
-
+struct ButtonNavigation: View {
     var body: some View {
             NavigationLink(
                 destination: ConfigurationScreen(viewModel: ConfigurationViewModel()),
@@ -21,9 +20,8 @@ struct NavigationButton: View {
     }
 }
 
-
 struct NavigationButton_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationButton()
+        ButtonNavigation()
     }
 }

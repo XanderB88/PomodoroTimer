@@ -11,8 +11,8 @@
 		1169137526CC7B70009CA6C6 /* ConfigurationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1169137326CC7B70009CA6C6 /* ConfigurationScreen.swift */; };
 		1169137726CC7DA6009CA6C6 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1169137626CC7DA6009CA6C6 /* MainScreenView.swift */; };
 		1169137826CC7DA6009CA6C6 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1169137626CC7DA6009CA6C6 /* MainScreenView.swift */; };
-		1169137A26CC8BE1009CA6C6 /* ButtonConfiguraton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1169137926CC8BE1009CA6C6 /* ButtonConfiguraton.swift */; };
-		1169137B26CC8BE1009CA6C6 /* ButtonConfiguraton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1169137926CC8BE1009CA6C6 /* ButtonConfiguraton.swift */; };
+		1169137A26CC8BE1009CA6C6 /* ButtonMute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1169137926CC8BE1009CA6C6 /* ButtonMute.swift */; };
+		1169137B26CC8BE1009CA6C6 /* ButtonMute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1169137926CC8BE1009CA6C6 /* ButtonMute.swift */; };
 		117AEA3326CB3833001CBD5E /* ButtonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117AEA3226CB3833001CBD5E /* ButtonAction.swift */; };
 		117AEA3426CB3833001CBD5E /* ButtonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117AEA3226CB3833001CBD5E /* ButtonAction.swift */; };
 		117AEA3626CB40C7001CBD5E /* CountDownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117AEA3526CB40C7001CBD5E /* CountDownTimer.swift */; };
@@ -30,7 +30,7 @@
 		11A86D9F26CDD36600B071EF /* ConfigurationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A86D9E26CDD36600B071EF /* ConfigurationViewModel.swift */; };
 		11A86DA126CDD38000B071EF /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A86DA026CDD38000B071EF /* MainViewModel.swift */; };
 		11AC483426D315920042D28B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AC483326D315920042D28B /* Extensions.swift */; };
-		11AC483626D3193D0042D28B /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AC483526D3193D0042D28B /* NavigationButton.swift */; };
+		11AC483626D3193D0042D28B /* ButtonNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AC483526D3193D0042D28B /* ButtonNavigation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,7 @@
 		1109C6B026C5FFBC0074023B /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
 		1169137326CC7B70009CA6C6 /* ConfigurationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationScreen.swift; sourceTree = "<group>"; };
 		1169137626CC7DA6009CA6C6 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
-		1169137926CC8BE1009CA6C6 /* ButtonConfiguraton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonConfiguraton.swift; sourceTree = "<group>"; };
+		1169137926CC8BE1009CA6C6 /* ButtonMute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonMute.swift; sourceTree = "<group>"; };
 		117AEA3226CB3833001CBD5E /* ButtonAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAction.swift; sourceTree = "<group>"; };
 		117AEA3526CB40C7001CBD5E /* CountDownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimer.swift; sourceTree = "<group>"; };
 		1181E08726C4926500D275A8 /* PomodoroTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroTimerApp.swift; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		11A86D9E26CDD36600B071EF /* ConfigurationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewModel.swift; sourceTree = "<group>"; };
 		11A86DA026CDD38000B071EF /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		11AC483326D315920042D28B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		11AC483526D3193D0042D28B /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
+		11AC483526D3193D0042D28B /* ButtonNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNavigation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,8 +171,8 @@
 				1181E0AB26C4B08200D275A8 /* PickerView.swift */,
 				117AEA3226CB3833001CBD5E /* ButtonAction.swift */,
 				117AEA3526CB40C7001CBD5E /* CountDownTimer.swift */,
-				1169137926CC8BE1009CA6C6 /* ButtonConfiguraton.swift */,
-				11AC483526D3193D0042D28B /* NavigationButton.swift */,
+				1169137926CC8BE1009CA6C6 /* ButtonMute.swift */,
+				11AC483526D3193D0042D28B /* ButtonNavigation.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -307,13 +307,13 @@
 				11A86D9F26CDD36600B071EF /* ConfigurationViewModel.swift in Sources */,
 				1169137726CC7DA6009CA6C6 /* MainScreenView.swift in Sources */,
 				1181E09C26C4926700D275A8 /* ApplicationView.swift in Sources */,
-				1169137A26CC8BE1009CA6C6 /* ButtonConfiguraton.swift in Sources */,
+				1169137A26CC8BE1009CA6C6 /* ButtonMute.swift in Sources */,
 				11AC483426D315920042D28B /* Extensions.swift in Sources */,
 				1181E09A26C4926700D275A8 /* PomodoroTimerApp.swift in Sources */,
 				117AEA3326CB3833001CBD5E /* ButtonAction.swift in Sources */,
 				1169137426CC7B70009CA6C6 /* ConfigurationScreen.swift in Sources */,
 				11A86DA126CDD38000B071EF /* MainViewModel.swift in Sources */,
-				11AC483626D3193D0042D28B /* NavigationButton.swift in Sources */,
+				11AC483626D3193D0042D28B /* ButtonNavigation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,7 +326,7 @@
 				1181E0AA26C49F8E00D275A8 /* PickerModel.swift in Sources */,
 				1169137826CC7DA6009CA6C6 /* MainScreenView.swift in Sources */,
 				1181E09D26C4926700D275A8 /* ApplicationView.swift in Sources */,
-				1169137B26CC8BE1009CA6C6 /* ButtonConfiguraton.swift in Sources */,
+				1169137B26CC8BE1009CA6C6 /* ButtonMute.swift in Sources */,
 				1181E09B26C4926700D275A8 /* PomodoroTimerApp.swift in Sources */,
 				117AEA3426CB3833001CBD5E /* ButtonAction.swift in Sources */,
 				1169137526CC7B70009CA6C6 /* ConfigurationScreen.swift in Sources */,
