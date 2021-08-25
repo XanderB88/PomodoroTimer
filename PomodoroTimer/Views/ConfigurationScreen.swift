@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ConfigurationScreen: View {
     @ObservedObject var viewModel: ConfigurationViewModel
+    
     @State var selectedPicker = timePickers()
     
     var body: some View {
@@ -26,7 +27,14 @@ struct ConfigurationScreen: View {
                 PickerView(titleValue: selectedPicker.longRest.title, timeValue: selectedPicker.longRest.time, selectedTime: 15)
                 PickerView(titleValue: selectedPicker.cicle.title, timeValue: selectedPicker.cicle.time, selectedTime: 3)
                 Spacer()
-                ButtonAction(buttonSymbol: "tray.and.arrow.down", function: viewModel.save, changes: viewModel.buttonSaveStateChanged)
+                Button(action: {
+        
+                }, label: {
+                    Image(systemName: "tray.and.arrow.down")
+                        .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
+                        .font(.custom("Quicksand-Regular", size: 40))
+                })
+                .buttonStyle(ButtonActionStyle())
             }
         }
         

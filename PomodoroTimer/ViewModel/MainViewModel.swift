@@ -16,28 +16,6 @@ class MainViewModel: ObservableObject {
     @Published var buttonPlayState: Bool = false
     @Published var buttonStopState: Bool = false
    
-//    Change stata parameter when button pushed
-    func buttonBellStateChanged() {
-        buttonBellState.toggle()
-        print(buttonBellState)
-    }
-    
-    func buttonConfigStateChanged() {
-        buttonConfigState.toggle()
-        print(buttonConfigState)
-    }
-    
-    func buttonPlayStateChanged() {
-        buttonPlayState.toggle()
-        print(buttonConfigState)
-    }
-    
-    func buttonStopStateChanged() {
-        buttonStopState.toggle()
-        print(buttonStopState)
-    }
-    
-    
     // MARK: - Action methods
     func startTimer() {
         print("Timer was started")
