@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct MainScreenView: View {
-    @ObservedObject var viewModel: MainViewModel
-    
+    @EnvironmentObject var viewModel: MainViewModel
+    @Binding var showingConfigurationScreen: Bool
     var body: some View {
-        NavigationView {
             ZStack {
                 LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.2470588235, green: 0.2705882353, blue: 0.3960784314, alpha: 1)), Color(#colorLiteral(red: 0.168627451, green: 0.1882352941, blue: 0.2941176471, alpha: 1))]), startPoint: .topLeading, endPoint: .bottomTrailing)
                     .edgesIgnoringSafeArea(.all)
@@ -30,7 +29,16 @@ struct MainScreenView: View {
                             .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
                             .font(.custom("Quicksand-Regular", size: 32))
                         Spacer()
-                        ButtonNavigation()
+                        Button(action: {
+                            self.showingConfigurationScreen.toggle()
+                            print(showingConfigurationScreen)
+                        }, label: {
+                            Image(systemName: "gear")
+                                .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
+                                .font(.custom("Quicksand-Regular", size: 25))
+                        })
+                        .buttonStyle(ButtonCofigurationStyle())
+//                        ButtonNavigation()
                     }
                     .padding()
                     Spacer()
@@ -66,9 +74,9 @@ struct MainScreenView: View {
             }
         }
     }
-}
+
 struct MainScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        MainScreenView(viewModel: MainViewModel())
+        MainScreenView(showingConfigurationScreen: .constant(false)).environmentObject(MainViewModel())
     }
 }

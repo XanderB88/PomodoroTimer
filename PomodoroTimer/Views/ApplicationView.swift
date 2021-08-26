@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct ApplicationView: View {
+    @State var showingConfigurationScreen: Bool = false
     var body: some View {
-        MainScreenView(viewModel: MainViewModel())
+        if showingConfigurationScreen {
+            ConfigurationScreen(viewModel: ConfigurationViewModel(), showingConfigurationScreen: $showingConfigurationScreen)
+        } else {
+            MainScreenView(showingConfigurationScreen: $showingConfigurationScreen)
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ApplicationView()
+        ApplicationView().environmentObject(MainViewModel())
     }
 }

@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ConfigurationScreen: View {
     @ObservedObject var viewModel: ConfigurationViewModel
-    
     @State var selectedPicker = timePickers()
+    @Binding var showingConfigurationScreen: Bool
     
     var body: some View {
         ZStack {
@@ -28,7 +28,8 @@ struct ConfigurationScreen: View {
                 PickerView(titleValue: selectedPicker.cicle.title, timeValue: selectedPicker.cicle.time, selectedTime: 3)
                 Spacer()
                 Button(action: {
-        
+                    self.showingConfigurationScreen.toggle()
+                    print(showingConfigurationScreen)
                 }, label: {
                     Image(systemName: "tray.and.arrow.down")
                         .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
@@ -44,6 +45,6 @@ struct ConfigurationScreen: View {
 
 struct ConfiguraionScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ConfigurationScreen(viewModel: ConfigurationViewModel())
+        ConfigurationScreen(viewModel: ConfigurationViewModel(), showingConfigurationScreen: .constant(true))
     }
 }
