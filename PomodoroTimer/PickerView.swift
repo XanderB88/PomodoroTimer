@@ -11,7 +11,7 @@ struct PickerView: View {
     
     var titleValue: String
     var timeValue: [String]
-    var selectedTime: Int
+    @State var selectedTime: Int
     
     var body: some View {
         HStack {
@@ -21,7 +21,7 @@ struct PickerView: View {
             
             Spacer()
             
-            Picker(selection: .constant(selectedTime), label: Text("selectedTime"), content: {
+            Picker(selection: $selectedTime, label: Text("selectedTime"), content: {
                 ForEach(0..<timeValue.count, content: { timeIndex in
                     Text(timeValue[timeIndex])
                         .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])

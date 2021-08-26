@@ -30,15 +30,15 @@ struct MainScreenView: View {
                             .font(.custom("Quicksand-Regular", size: 32))
                         Spacer()
                         Button(action: {
-                            self.showingConfigurationScreen.toggle()
-                            print(showingConfigurationScreen)
+                            withAnimation(.easeOut) {
+                                self.showingConfigurationScreen.toggle()
+                            }
                         }, label: {
                             Image(systemName: "gear")
                                 .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
                                 .font(.custom("Quicksand-Regular", size: 25))
                         })
                         .buttonStyle(ButtonCofigurationStyle())
-//                        ButtonNavigation()
                     }
                     .padding()
                     Spacer()

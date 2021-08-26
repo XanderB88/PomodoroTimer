@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ApplicationView: View {
-    @State var showingConfigurationScreen: Bool = false
+    @State private var showingConfigurationScreen: Bool = false
     var body: some View {
         if showingConfigurationScreen {
-            ConfigurationScreen(viewModel: ConfigurationViewModel(), showingConfigurationScreen: $showingConfigurationScreen)
+            ConfigurationScreenEdited(showingConfigurationScreen: $showingConfigurationScreen, selectedTime: .constant(5))
         } else {
             MainScreenView(showingConfigurationScreen: $showingConfigurationScreen)
         }
