@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ConfigurationScreenEdited: View {
-    @State var selectedPicker = timePickers()
+    @EnvironmentObject var viewModel: MainViewModel
     @Binding var showingConfigurationScreen: Bool
     @Binding var selectedTime: Int
     
@@ -22,10 +22,10 @@ struct ConfigurationScreenEdited: View {
                     .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
                     .font(.custom("Quicksand-Regular", size: 32))
                 Spacer()
-                PickerView(titleValue: selectedPicker.work.title, timeValue: selectedPicker.work.time, selectedTime: selectedTime)
-                PickerView(titleValue: selectedPicker.rest.title, timeValue: selectedPicker.rest.time, selectedTime: selectedTime)
-                PickerView(titleValue: selectedPicker.longRest.title, timeValue: selectedPicker.longRest.time, selectedTime: selectedTime)
-                PickerView(titleValue: selectedPicker.cicle.title, timeValue: selectedPicker.cicle.time, selectedTime: selectedTime)
+                PickerView(titleValue: viewModel.work.title, timeValue: viewModel.work.time, selectedTime: selectedTime)
+                PickerView(titleValue: viewModel.rest.title, timeValue: viewModel.rest.time, selectedTime: selectedTime)
+                PickerView(titleValue: viewModel.longRest.title, timeValue: viewModel.longRest.time, selectedTime: selectedTime)
+                PickerView(titleValue: viewModel.cycle.title, timeValue: viewModel.cycle.time, selectedTime: selectedTime)
                 Spacer()
                 Button(action: {
                     self.showingConfigurationScreen.toggle()
@@ -45,6 +45,6 @@ struct ConfigurationScreenEdited: View {
 
 struct ConfiguraionScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ConfigurationScreenEdited(showingConfigurationScreen: .constant(true), selectedTime: .constant(5))
+        ConfigurationScreenEdited(showingConfigurationScreen: .constant(true), selectedTime: .constant(5)).environmentObject(MainViewModel())
     }
 }
