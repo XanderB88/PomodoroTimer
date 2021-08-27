@@ -17,12 +17,6 @@ class MainViewModel: ObservableObject {
     @Published var buttonPlayState: Bool = false
     @Published var buttonStopState: Bool = false
 
-    // MARK: - Create pickers
-    @Published var work = TimePickerModel(title: "Work", time: Array(10...30).map { String($0) }, selectedTime: 15)
-    @Published var rest = TimePickerModel(title: "Rest", time: Array(1...10).map { String($0) }, selectedTime: 4)
-    @Published var longRest = TimePickerModel(title: "LongRest", time: Array(10...30).map { String($0) }, selectedTime: 15)
-    @Published var cycle = TimePickerModel(title: "Cicle", time: Array(1...5).map { String($0)}, selectedTime: 3)
-    
     // MARK: - Pickers selected time
     @Published var selectedWorkTime: Int = 25
     @Published var selectedRestTime: Int = 5
@@ -34,6 +28,13 @@ class MainViewModel: ObservableObject {
     @Published var selectedRestTimeText: String = "5"
     @Published var selectedLongRestTimeText: String = "15"
     @Published var selectedCycleTimeText: String = "4"
+    
+    // MARK: - Create pickers
+    @Published var work = TimePickerModel(title: "Work", time: Array(10...30).map { String($0) }, selectedTime: 15)
+    @Published var rest = TimePickerModel(title: "Rest", time: Array(1...10).map { String($0) }, selectedTime: 4)
+    @Published var longRest = TimePickerModel(title: "LongRest", time: Array(10...30).map { String($0) }, selectedTime: 15)
+    @Published var cycle = TimePickerModel(title: "Cicle", time: Array(1...5).map { String($0)}, selectedTime: 3)
+    
     
     // MARK: - Action methods
     func startTimer() {
@@ -50,9 +51,5 @@ class MainViewModel: ObservableObject {
     
     func muteTimer() {
         print("Timer was mute")
-    }
-    
-    func nothing() {
-        print("Do nothing")
     }
 }
