@@ -11,7 +11,7 @@ struct ApplicationView: View {
     @State private var showingConfigurationScreen: Bool = false
     var body: some View {
         if showingConfigurationScreen {
-            ConfigurationScreenEdited(showingConfigurationScreen: $showingConfigurationScreen, selectedTime: .constant(5))
+            TabConfigurationScreens(showingConfigurationScreen: $showingConfigurationScreen)
         } else {
             MainScreenView(showingConfigurationScreen: $showingConfigurationScreen)
         }

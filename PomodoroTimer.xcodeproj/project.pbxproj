@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11449ED326D8732700F30418 /* TabConfigurationScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11449ED226D8732700F30418 /* TabConfigurationScreens.swift */; };
+		11449ED426D8732700F30418 /* TabConfigurationScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11449ED226D8732700F30418 /* TabConfigurationScreens.swift */; };
 		1169137426CC7B70009CA6C6 /* ConfigurationScreenEdited.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1169137326CC7B70009CA6C6 /* ConfigurationScreenEdited.swift */; };
 		1169137526CC7B70009CA6C6 /* ConfigurationScreenEdited.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1169137326CC7B70009CA6C6 /* ConfigurationScreenEdited.swift */; };
 		1169137726CC7DA6009CA6C6 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1169137626CC7DA6009CA6C6 /* MainScreenView.swift */; };
@@ -35,6 +37,7 @@
 		1109C6AE26C5FFBC0074023B /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-SemiBold.ttf"; sourceTree = "<group>"; };
 		1109C6AF26C5FFBC0074023B /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
 		1109C6B026C5FFBC0074023B /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		11449ED226D8732700F30418 /* TabConfigurationScreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabConfigurationScreens.swift; sourceTree = "<group>"; };
 		1169137326CC7B70009CA6C6 /* ConfigurationScreenEdited.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationScreenEdited.swift; sourceTree = "<group>"; };
 		1169137626CC7DA6009CA6C6 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		117AEA3526CB40C7001CBD5E /* CountDownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimer.swift; sourceTree = "<group>"; };
@@ -113,6 +116,7 @@
 			children = (
 				1181E08626C4926500D275A8 /* PomodoroTimer */,
 				11AC483226D3155C0042D28B /* Extensions */,
+				115E626726C5EB15003B0B41 /* Supporting files */,
 				1181E09026C4926700D275A8 /* iOS */,
 				1181E09726C4926700D275A8 /* macOS */,
 				1181E08F26C4926700D275A8 /* Products */,
@@ -127,7 +131,6 @@
 				1182043A26C9DA1100CDD199 /* Views */,
 				11A86D9D26CDD2F500B071EF /* ViewModel */,
 				1182043926C9D9E900CDD199 /* Components */,
-				115E626726C5EB15003B0B41 /* Supporting files */,
 			);
 			path = PomodoroTimer;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				1169137626CC7DA6009CA6C6 /* MainScreenView.swift */,
 				1169137326CC7B70009CA6C6 /* ConfigurationScreenEdited.swift */,
 				11A47AF126D7229B000EAA91 /* ConfigurationScreen.swift */,
+				11449ED226D8732700F30418 /* TabConfigurationScreens.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -299,6 +303,7 @@
 				11AC483426D315920042D28B /* Extensions.swift in Sources */,
 				1181E09A26C4926700D275A8 /* PomodoroTimerApp.swift in Sources */,
 				1169137426CC7B70009CA6C6 /* ConfigurationScreenEdited.swift in Sources */,
+				11449ED326D8732700F30418 /* TabConfigurationScreens.swift in Sources */,
 				11A47AF226D7229B000EAA91 /* ConfigurationScreen.swift in Sources */,
 				11A86DA126CDD38000B071EF /* MainViewModel.swift in Sources */,
 			);
@@ -315,6 +320,7 @@
 				11A47AF326D7229B000EAA91 /* ConfigurationScreen.swift in Sources */,
 				1181E09D26C4926700D275A8 /* ApplicationView.swift in Sources */,
 				1181E09B26C4926700D275A8 /* PomodoroTimerApp.swift in Sources */,
+				11449ED426D8732700F30418 /* TabConfigurationScreens.swift in Sources */,
 				1169137526CC7B70009CA6C6 /* ConfigurationScreenEdited.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

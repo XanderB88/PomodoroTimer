@@ -10,6 +10,7 @@ import SwiftUI
 struct ConfigurationScreenEdited: View {
     @EnvironmentObject var viewModel: MainViewModel
     @Binding var showingConfigurationScreen: Bool
+    @Binding var configurationEditing: Bool
     @Binding var selectedTime: Int
     
     var body: some View {
@@ -18,24 +19,38 @@ struct ConfigurationScreenEdited: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack(alignment: .center, spacing: 30) {
-                Text("Pomodoro")
-                    .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
-                    .font(.custom("Quicksand-Regular", size: 32))
+                HStack {
+                    Button(action: {
+                        self.configurationEditing.toggle()
+                    }, label: {
+                        Text("Back")
+                            .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
+                            .font(.custom("Quicksand-Regular", size: 16))
+                    })
+                    .buttonStyle(ButtonEditingStyle())
+                    .padding()
+                    Spacer()
+                    Text("Pomodoro")
+                        .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
+                        .font(.custom("Quicksand-Regular", size: 32))
+                    Spacer()
+                    Button(action: {
+                        
+                    }, label: {
+                        Text("Save")
+                            .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
+                            .font(.custom("Quicksand-Regular", size: 16))
+                    })
+                    .buttonStyle(ButtonEditingStyle())
+                    .padding()
+                    
+                }
                 Spacer()
                 PickerView(titleValue: viewModel.work.title, timeValue: viewModel.work.time, selectedTime: selectedTime)
                 PickerView(titleValue: viewModel.rest.title, timeValue: viewModel.rest.time, selectedTime: selectedTime)
                 PickerView(titleValue: viewModel.longRest.title, timeValue: viewModel.longRest.time, selectedTime: selectedTime)
                 PickerView(titleValue: viewModel.cycle.title, timeValue: viewModel.cycle.time, selectedTime: selectedTime)
                 Spacer()
-                Button(action: {
-                    self.showingConfigurationScreen.toggle()
-                    print(showingConfigurationScreen)
-                }, label: {
-                    Image(systemName: "tray.and.arrow.down")
-                        .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
-                        .font(.custom("Quicksand-Regular", size: 40))
-                })
-                .buttonStyle(ButtonActionStyle())
             }
         }
         
@@ -45,6 +60,6 @@ struct ConfigurationScreenEdited: View {
 
 struct ConfiguraionScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ConfigurationScreenEdited(showingConfigurationScreen: .constant(true), selectedTime: .constant(5)).environmentObject(MainViewModel())
+        ConfigurationScreenEdited(showingConfigurationScreen: .constant(true), configurationEditing: .constant(true), selectedTime: .constant(5)).environmentObject(MainViewModel())
     }
 }
