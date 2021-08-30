@@ -17,11 +17,11 @@ class MainViewModel: ObservableObject {
     @Published var buttonPlayState: Bool = false
     @Published var buttonStopState: Bool = false
 
-    // MARK: - Pickers selected time
-    @Published var selectedWorkTime: Int = 25
-    @Published var selectedRestTime: Int = 5
-    @Published var selectedLongTime: Int = 20
-    @Published var selectedCycleTime: Int = 3
+//    // MARK: - Pickers selected time
+//    @Published var selectedWorkTime: Int = 25
+//    @Published var selectedRestTime: Int = 5
+//    @Published var selectedLongTime: Int = 15
+//    @Published var selectedCycleTime: Int = 4
     
     // MARK: - Pickers selected time text format
     @Published var selectedWorkTimeText: String = "25"
@@ -30,10 +30,10 @@ class MainViewModel: ObservableObject {
     @Published var selectedCycleTimeText: String = "4"
     
     // MARK: - Create pickers
-    @Published var work = TimePickerModel(title: "Work", time: Array(10...30).map { String($0) }, selectedTime: 15)
-    @Published var rest = TimePickerModel(title: "Rest", time: Array(1...10).map { String($0) }, selectedTime: 4)
-    @Published var longRest = TimePickerModel(title: "LongRest", time: Array(10...30).map { String($0) }, selectedTime: 15)
-    @Published var cycle = TimePickerModel(title: "Cicle", time: Array(1...5).map { String($0)}, selectedTime: 3)
+    @Published var work = TimePickerModel(title: "Work", time: Array(0...30).map { String($0) }, selectedTime: 0)
+    @Published var rest = TimePickerModel(title: "Rest", time: Array(0...10).map { String($0) }, selectedTime: 0)
+    @Published var longRest = TimePickerModel(title: "LongRest", time: Array(0...30).map { String($0) }, selectedTime: 0)
+    @Published var cycle = TimePickerModel(title: "Cicle", time: Array(0...5).map { String($0)}, selectedTime: 0)
     
     
     // MARK: - Action methods

@@ -23,8 +23,6 @@
 		1181E09F26C4926700D275A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1181E08926C4926700D275A8 /* Assets.xcassets */; };
 		1181E0A926C49F8E00D275A8 /* PickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1181E0A826C49F8E00D275A8 /* PickerModel.swift */; };
 		1181E0AA26C49F8E00D275A8 /* PickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1181E0A826C49F8E00D275A8 /* PickerModel.swift */; };
-		1181E0AC26C4B08200D275A8 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1181E0AB26C4B08200D275A8 /* PickerView.swift */; };
-		1181E0AD26C4B08200D275A8 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1181E0AB26C4B08200D275A8 /* PickerView.swift */; };
 		11A47AF226D7229B000EAA91 /* ConfigurationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A47AF126D7229B000EAA91 /* ConfigurationScreen.swift */; };
 		11A47AF326D7229B000EAA91 /* ConfigurationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A47AF126D7229B000EAA91 /* ConfigurationScreen.swift */; };
 		11A86DA126CDD38000B071EF /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A86DA026CDD38000B071EF /* MainViewModel.swift */; };
@@ -50,7 +48,6 @@
 		1181E09826C4926700D275A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1181E09926C4926700D275A8 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		1181E0A826C49F8E00D275A8 /* PickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerModel.swift; sourceTree = "<group>"; };
-		1181E0AB26C4B08200D275A8 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		11A47AF126D7229B000EAA91 /* ConfigurationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationScreen.swift; sourceTree = "<group>"; };
 		11A86DA026CDD38000B071EF /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		11AC483326D315920042D28B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -164,7 +161,6 @@
 		1182043926C9D9E900CDD199 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				1181E0AB26C4B08200D275A8 /* PickerView.swift */,
 				117AEA3526CB40C7001CBD5E /* CountDownTimer.swift */,
 			);
 			name = Components;
@@ -295,7 +291,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1181E0AC26C4B08200D275A8 /* PickerView.swift in Sources */,
 				117AEA3626CB40C7001CBD5E /* CountDownTimer.swift in Sources */,
 				1181E0A926C49F8E00D275A8 /* PickerModel.swift in Sources */,
 				1169137726CC7DA6009CA6C6 /* MainScreenView.swift in Sources */,
@@ -313,7 +308,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1181E0AD26C4B08200D275A8 /* PickerView.swift in Sources */,
 				117AEA3726CB40C7001CBD5E /* CountDownTimer.swift in Sources */,
 				1181E0AA26C49F8E00D275A8 /* PickerModel.swift in Sources */,
 				1169137826CC7DA6009CA6C6 /* MainScreenView.swift in Sources */,
