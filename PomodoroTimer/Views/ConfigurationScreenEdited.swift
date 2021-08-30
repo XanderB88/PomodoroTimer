@@ -13,10 +13,10 @@ struct ConfigurationScreenEdited: View {
     @Binding var configurationEditing: Bool
     
     // MARK: - Pickers selected time
-    @State private var selectedWorkTime: Int = UserDefaults.standard.integer(forKey: "Work time")
-    @State private var selectedRestTime: Int = UserDefaults.standard.integer(forKey: "Rest time")
-    @State private var selectedLongRestTime: Int = UserDefaults.standard.integer(forKey: "Long rest time")
-    @State private var selectedCycleTime: Int = UserDefaults.standard.integer(forKey: "Cycle time")
+    @State private var selectedWorkTimeIndex: Int = UserDefaults.standard.integer(forKey: "Work time")
+    @State private var selectedRestTimeIndex: Int = UserDefaults.standard.integer(forKey: "Rest time")
+    @State private var selectedLongRestTimeIndex: Int = UserDefaults.standard.integer(forKey: "Long rest time")
+    @State private var selectedCycleTimeIndex: Int = UserDefaults.standard.integer(forKey: "Cycle time")
     
     var body: some View {
         ZStack {
@@ -45,14 +45,10 @@ struct ConfigurationScreenEdited: View {
                     Spacer()
                    
                     Button(action: {
-                        UserDefaults.standard.set(self.selectedWorkTime, forKey: "Work time")
-                        viewModel.selectedWorkTimeText = viewModel.work.time[selectedWorkTime]
-                        UserDefaults.standard.set(self.selectedRestTime, forKey: "Rest time")
-                        viewModel.selectedRestTimeText = viewModel.rest.time[selectedRestTime]
-                        UserDefaults.standard.set(self.selectedLongRestTime, forKey: "Long rest time")
-                        viewModel.selectedLongRestTimeText = viewModel.longRest.time[selectedLongRestTime]
-                        UserDefaults.standard.set(self.selectedCycleTime, forKey: "Cycle time")
-                        viewModel.selectedCycleTimeText = viewModel.cycle.time[selectedCycleTime]
+                        UserDefaults.standard.set(self.selectedWorkTimeIndex, forKey: "Work time")
+                        UserDefaults.standard.set(self.selectedRestTimeIndex, forKey: "Rest time")
+                        UserDefaults.standard.set(self.selectedLongRestTimeIndex, forKey: "Long rest time")
+                        UserDefaults.standard.set(self.selectedCycleTimeIndex, forKey: "Cycle time")
                     }, label: {
                         Text("Save")
                             .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
@@ -72,7 +68,7 @@ struct ConfigurationScreenEdited: View {
                     
                     Spacer()
                
-                    Picker(selection: $selectedWorkTime, label: Text(viewModel.work.title), content: {
+                    Picker(selection: $selectedWorkTimeIndex, label: Text(viewModel.work.title), content: {
                     ForEach(0..<viewModel.work.time.count, content: { selectedTime in
                         Text(viewModel.work.time[selectedTime])
                             .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
@@ -93,7 +89,7 @@ struct ConfigurationScreenEdited: View {
                     
                     Spacer()
                
-                    Picker(selection: $selectedRestTime, label: Text(viewModel.rest.title), content: {
+                    Picker(selection: $selectedRestTimeIndex, label: Text(viewModel.rest.title), content: {
                     ForEach(0..<viewModel.rest.time.count, content: { selectedTime in
                         Text(viewModel.rest.time[selectedTime])
                             .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
@@ -114,7 +110,7 @@ struct ConfigurationScreenEdited: View {
                     
                     Spacer()
                
-                    Picker(selection: $selectedLongRestTime, label: Text(viewModel.longRest.title), content: {
+                    Picker(selection: $selectedLongRestTimeIndex, label: Text(viewModel.longRest.title), content: {
                     ForEach(0..<viewModel.longRest.time.count, content: { selectedTime in
                         Text(viewModel.longRest.time[selectedTime])
                             .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
@@ -135,7 +131,7 @@ struct ConfigurationScreenEdited: View {
                     
                     Spacer()
                
-                    Picker(selection: $selectedCycleTime, label: Text(viewModel.work.title), content: {
+                    Picker(selection: $selectedCycleTimeIndex, label: Text(viewModel.work.title), content: {
                     ForEach(0..<viewModel.cycle.time.count, content: { selectedTime in
                         Text(viewModel.cycle.time[selectedTime])
                             .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])

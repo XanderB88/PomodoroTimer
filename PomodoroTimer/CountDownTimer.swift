@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct CountDownTimer: View {
-    var currentTimeIndication: Float = 0.8
+    @State var currentTimeIndication: Float = 0.8
+    @State var currentTime: String = "20"
     
     var body: some View {
         ZStack {
@@ -43,7 +44,7 @@ struct CountDownTimer: View {
                     )
                     
                 VStack {
-                    Text("20")
+                    Text(currentTime)
                         .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
                         .font(.custom("Quicksand-Regular", size: 45))
                     Text("minute")

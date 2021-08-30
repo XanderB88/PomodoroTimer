@@ -16,18 +16,6 @@ class MainViewModel: ObservableObject {
     @Published var buttonConfigState: Bool = false
     @Published var buttonPlayState: Bool = false
     @Published var buttonStopState: Bool = false
-
-//    // MARK: - Pickers selected time
-//    @Published var selectedWorkTime: Int = 25
-//    @Published var selectedRestTime: Int = 5
-//    @Published var selectedLongTime: Int = 15
-//    @Published var selectedCycleTime: Int = 4
-    
-    // MARK: - Pickers selected time text format
-    @Published var selectedWorkTimeText: String = "25"
-    @Published var selectedRestTimeText: String = "5"
-    @Published var selectedLongRestTimeText: String = "15"
-    @Published var selectedCycleTimeText: String = "4"
     
     // MARK: - Create pickers
     @Published var work = TimePickerModel(title: "Work", time: Array(0...30).map { String($0) }, selectedTime: 0)
@@ -35,6 +23,13 @@ class MainViewModel: ObservableObject {
     @Published var longRest = TimePickerModel(title: "LongRest", time: Array(0...30).map { String($0) }, selectedTime: 0)
     @Published var cycle = TimePickerModel(title: "Cicle", time: Array(0...5).map { String($0)}, selectedTime: 0)
     
+    // MARK: - Pickers choosing time
+    @Published var selectedWorkTime: Int = 25
+    @Published var selectedRestTime: Int = 5
+    @Published var selectedLongRestTime: Int = 15
+    @Published var selectedCycleTime: Int = 4
+    
+   
     
     // MARK: - Action methods
     func startTimer() {
@@ -51,5 +46,9 @@ class MainViewModel: ObservableObject {
     
     func muteTimer() {
         print("Timer was mute")
+    }
+    
+    func changeTimer() {
+        selectedWorkTime = Int(work.time[UserDefaults.standard.integer(forKey: "Work time")]) ?? 25
     }
 }
