@@ -12,11 +12,11 @@ struct ConfigurationScreenEdited: View {
     @Binding var showingConfigurationScreen: Bool
     @Binding var configurationEditing: Bool
     
-    // MARK: - Pickers selected time
-    @State private var selectedWorkTimeIndex: Int = UserDefaults.standard.integer(forKey: "Work time")
-    @State private var selectedRestTimeIndex: Int = UserDefaults.standard.integer(forKey: "Rest time")
-    @State private var selectedLongRestTimeIndex: Int = UserDefaults.standard.integer(forKey: "Long rest time")
-    @State private var selectedCycleTimeIndex: Int = UserDefaults.standard.integer(forKey: "Cycle time")
+    //    // MARK: - Pickers selected time
+    //    @State private var selectedWorkTimeIndex: Int = UserDefaults.standard.integer(forKey: "Work time")
+    //    @State private var selectedRestTimeIndex: Int = UserDefaults.standard.integer(forKey: "Rest time")
+    //    @State private var selectedLongRestTimeIndex: Int = UserDefaults.standard.integer(forKey: "Long rest time")
+    //    @State private var selectedCycleTimeIndex: Int = UserDefaults.standard.integer(forKey: "Cycle time")
     
     var body: some View {
         ZStack {
@@ -24,7 +24,7 @@ struct ConfigurationScreenEdited: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack(alignment: .center, spacing: 30) {
-               
+                
                 HStack {
                     Button(action: {
                         self.configurationEditing.toggle()
@@ -35,20 +35,18 @@ struct ConfigurationScreenEdited: View {
                     })
                     .buttonStyle(ButtonEditingStyle())
                     .padding()
-                  
+                    
                     Spacer()
-                 
+                    
                     Text("Pomodoro")
                         .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
                         .font(.custom("Quicksand-Regular", size: 32))
-                  
+                    
                     Spacer()
-                   
+                    
                     Button(action: {
-                        UserDefaults.standard.set(self.selectedWorkTimeIndex, forKey: "Work time")
-                        UserDefaults.standard.set(self.selectedRestTimeIndex, forKey: "Rest time")
-                        UserDefaults.standard.set(self.selectedLongRestTimeIndex, forKey: "Long rest time")
-                        UserDefaults.standard.set(self.selectedCycleTimeIndex, forKey: "Cycle time")
+                        viewModel.writeInMemory()
+                        self.configurationEditing.toggle()
                     }, label: {
                         Text("Save")
                             .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
@@ -58,48 +56,48 @@ struct ConfigurationScreenEdited: View {
                     .padding()
                     
                 }
-               
+                
                 Spacer()
-               
+                
                 HStack {
                     Text(viewModel.work.title)
                         .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
                         .font(.custom("Quicksand-Regular", size: 26))
                     
                     Spacer()
-               
-                    Picker(selection: $selectedWorkTimeIndex, label: Text(viewModel.work.title), content: {
-                    ForEach(0..<viewModel.work.time.count, content: { selectedTime in
-                        Text(viewModel.work.time[selectedTime])
-                            .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
-                            .font(.custom("Quicksand-Regular", size: 26))
+                    
+                    Picker(selection: $viewModel.selectedWorkTimeIndex, label: Text(viewModel.work.title), content: {
+                        ForEach(0..<viewModel.work.time.count, content: { selectedTime in
+                            Text(viewModel.work.time[selectedTime])
+                                .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
+                                .font(.custom("Quicksand-Regular", size: 26))
+                        })
                     })
-                })
-                .frame(width: 100, height: 50)
-                .clipped()
-                .border(Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), width: 1)
-                .cornerRadius(3.0)
+                    .frame(width: 100, height: 50)
+                    .clipped()
+                    .border(Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), width: 1)
+                    .cornerRadius(3.0)
                 }
                 .frame(width: 350, height: 100, alignment: .center)
-        
+                
                 HStack {
                     Text(viewModel.rest.title)
                         .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
                         .font(.custom("Quicksand-Regular", size: 26))
                     
                     Spacer()
-               
-                    Picker(selection: $selectedRestTimeIndex, label: Text(viewModel.rest.title), content: {
-                    ForEach(0..<viewModel.rest.time.count, content: { selectedTime in
-                        Text(viewModel.rest.time[selectedTime])
-                            .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
-                            .font(.custom("Quicksand-Regular", size: 26))
+                    
+                    Picker(selection: $viewModel.selectedRestTimeIndex, label: Text(viewModel.rest.title), content: {
+                        ForEach(0..<viewModel.rest.time.count, content: { selectedTime in
+                            Text(viewModel.rest.time[selectedTime])
+                                .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
+                                .font(.custom("Quicksand-Regular", size: 26))
+                        })
                     })
-                })
-                .frame(width: 100, height: 50)
-                .clipped()
-                .border(Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), width: 1)
-                .cornerRadius(3.0)
+                    .frame(width: 100, height: 50)
+                    .clipped()
+                    .border(Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), width: 1)
+                    .cornerRadius(3.0)
                 }
                 .frame(width: 350, height: 100, alignment: .center)
                 
@@ -109,18 +107,18 @@ struct ConfigurationScreenEdited: View {
                         .font(.custom("Quicksand-Regular", size: 26))
                     
                     Spacer()
-               
-                    Picker(selection: $selectedLongRestTimeIndex, label: Text(viewModel.longRest.title), content: {
-                    ForEach(0..<viewModel.longRest.time.count, content: { selectedTime in
-                        Text(viewModel.longRest.time[selectedTime])
-                            .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
-                            .font(.custom("Quicksand-Regular", size: 26))
+                    
+                    Picker(selection: $viewModel.selectedLongRestTimeIndex, label: Text(viewModel.longRest.title), content: {
+                        ForEach(0..<viewModel.longRest.time.count, content: { selectedTime in
+                            Text(viewModel.longRest.time[selectedTime])
+                                .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
+                                .font(.custom("Quicksand-Regular", size: 26))
+                        })
                     })
-                })
-                .frame(width: 100, height: 50)
-                .clipped()
-                .border(Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), width: 1)
-                .cornerRadius(3.0)
+                    .frame(width: 100, height: 50)
+                    .clipped()
+                    .border(Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), width: 1)
+                    .cornerRadius(3.0)
                 }
                 .frame(width: 350, height: 100, alignment: .center)
                 
@@ -130,18 +128,18 @@ struct ConfigurationScreenEdited: View {
                         .font(.custom("Quicksand-Regular", size: 26))
                     
                     Spacer()
-               
-                    Picker(selection: $selectedCycleTimeIndex, label: Text(viewModel.work.title), content: {
-                    ForEach(0..<viewModel.cycle.time.count, content: { selectedTime in
-                        Text(viewModel.cycle.time[selectedTime])
-                            .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
-                            .font(.custom("Quicksand-Regular", size: 26))
+                    
+                    Picker(selection: $viewModel.selectedCycleTimeIndex, label: Text(viewModel.work.title), content: {
+                        ForEach(0..<viewModel.cycle.time.count, content: { selectedTime in
+                            Text(viewModel.cycle.time[selectedTime])
+                                .gradientForeground(colors: [Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), Color(#colorLiteral(red: 0.5725490196, green: 0.6, blue: 0.7607843137, alpha: 1))])
+                                .font(.custom("Quicksand-Regular", size: 26))
+                        })
                     })
-                })
-                .frame(width: 100, height: 50)
-                .clipped()
-                .border(Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), width: 1)
-                .cornerRadius(3.0)
+                    .frame(width: 100, height: 50)
+                    .clipped()
+                    .border(Color(#colorLiteral(red: 0.8235294118, green: 0.8392156863, blue: 0.937254902, alpha: 1)), width: 1)
+                    .cornerRadius(3.0)
                 }
                 .frame(width: 350, height: 100, alignment: .center)
                 

@@ -29,7 +29,19 @@ class MainViewModel: ObservableObject {
     @Published var selectedLongRestTime: Int = 15
     @Published var selectedCycleTime: Int = 4
     
-   
+    // MARK: - Pickers selected time read from memory
+    @Published var selectedWorkTimeIndex: Int = UserDefaults.standard.integer(forKey: "Work time")
+    @Published var selectedRestTimeIndex: Int = UserDefaults.standard.integer(forKey: "Rest time")
+    @Published var selectedLongRestTimeIndex: Int = UserDefaults.standard.integer(forKey: "Long rest time")
+    @Published var selectedCycleTimeIndex: Int = UserDefaults.standard.integer(forKey: "Cycle time")
+    
+    func writeInMemory() {
+        UserDefaults.standard.set(self.selectedWorkTimeIndex, forKey: "Work time")
+        UserDefaults.standard.set(self.selectedRestTimeIndex, forKey: "Rest time")
+        UserDefaults.standard.set(self.selectedLongRestTimeIndex, forKey: "Long rest time")
+        UserDefaults.standard.set(self.selectedCycleTimeIndex, forKey: "Cycle time")
+    }
+    
     
     // MARK: - Action methods
     func startTimer() {
@@ -52,3 +64,5 @@ class MainViewModel: ObservableObject {
         selectedWorkTime = Int(work.time[UserDefaults.standard.integer(forKey: "Work time")]) ?? 25
     }
 }
+
+
