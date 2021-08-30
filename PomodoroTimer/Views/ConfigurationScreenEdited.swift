@@ -13,10 +13,10 @@ struct ConfigurationScreenEdited: View {
     @Binding var configurationEditing: Bool
     
     // MARK: - Pickers selected time
-    @State var selectedWorkTime: Int = 25
-    @State var selectedRestTime: Int = 5
-    @State var selectedLongRestTime: Int = 15
-    @State var selectedCycleTime: Int = 4
+    @State private var selectedWorkTime: Int = UserDefaults.standard.integer(forKey: "Work time")
+    @State private var selectedRestTime: Int = UserDefaults.standard.integer(forKey: "Rest time")
+    @State private var selectedLongRestTime: Int = UserDefaults.standard.integer(forKey: "Long rest time")
+    @State private var selectedCycleTime: Int = UserDefaults.standard.integer(forKey: "Cycle time")
     
     var body: some View {
         ZStack {
@@ -45,9 +45,13 @@ struct ConfigurationScreenEdited: View {
                     Spacer()
                    
                     Button(action: {
+                        UserDefaults.standard.set(self.selectedWorkTime, forKey: "Work time")
                         viewModel.selectedWorkTimeText = viewModel.work.time[selectedWorkTime]
+                        UserDefaults.standard.set(self.selectedRestTime, forKey: "Rest time")
                         viewModel.selectedRestTimeText = viewModel.rest.time[selectedRestTime]
+                        UserDefaults.standard.set(self.selectedLongRestTime, forKey: "Long rest time")
                         viewModel.selectedLongRestTimeText = viewModel.longRest.time[selectedLongRestTime]
+                        UserDefaults.standard.set(self.selectedCycleTime, forKey: "Cycle time")
                         viewModel.selectedCycleTimeText = viewModel.cycle.time[selectedCycleTime]
                     }, label: {
                         Text("Save")
