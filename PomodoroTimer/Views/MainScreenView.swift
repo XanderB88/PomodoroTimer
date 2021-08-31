@@ -71,7 +71,6 @@ struct MainScreenView: View {
                 Spacer()
             }
         }
-        .onAppear(perform: viewModel.changeTimer)
     }
 }
 
