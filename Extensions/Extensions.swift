@@ -62,7 +62,7 @@ struct ButtonActionStyle: ButtonStyle {
     }
 }
 
-struct ButtonCofigurationStyle: ButtonStyle {
+struct ButtonConfigurationStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
             .frame(width: 15, height: 15)

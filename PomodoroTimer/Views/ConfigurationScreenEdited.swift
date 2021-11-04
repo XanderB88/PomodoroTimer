@@ -145,7 +145,7 @@ struct ConfigurationScreenEdited: View {
 }
 
 
-struct ConfiguraionScreen_Previews: PreviewProvider {
+struct ConfigurationScreenEdited_Previews: PreviewProvider {
     static var previews: some View {
         ConfigurationScreenEdited(showingConfigurationScreen: .constant(true), configurationEditing: .constant(true)).environmentObject(MainViewModel())
     }
