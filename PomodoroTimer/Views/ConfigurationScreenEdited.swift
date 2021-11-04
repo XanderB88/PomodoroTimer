@@ -12,12 +12,6 @@ struct ConfigurationScreenEdited: View {
     @Binding var showingConfigurationScreen: Bool
     @Binding var configurationEditing: Bool
     
-    //    // MARK: - Pickers selected time
-    //    @State private var selectedWorkTimeIndex: Int = UserDefaults.standard.integer(forKey: "Work time")
-    //    @State private var selectedRestTimeIndex: Int = UserDefaults.standard.integer(forKey: "Rest time")
-    //    @State private var selectedLongRestTimeIndex: Int = UserDefaults.standard.integer(forKey: "Long rest time")
-    //    @State private var selectedCycleTimeIndex: Int = UserDefaults.standard.integer(forKey: "Cycle time")
-    
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.2470588235, green: 0.2705882353, blue: 0.3960784314, alpha: 1)), Color(#colorLiteral(red: 0.168627451, green: 0.1882352941, blue: 0.2941176471, alpha: 1))]), startPoint: .topLeading, endPoint: .bottomTrailing)
